@@ -19,12 +19,12 @@ pipeline {
    }      
        stage('push-artifact') { 
                 steps {
-                        sh 'sudo apt update -y'
-                        sh 'curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64-2.0.30.zip" -o "awscliv2.zip"'
-                        sh 'sudo apt install unzip -y'
-                        sh 'unzip awscliv2.zip'
-                        sh 'sudo ./aws/install'
-                        sh 'aws s3 ls'
+                        // sh 'sudo apt update -y'
+                        // sh 'curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64-2.0.30.zip" -o "awscliv2.zip"'
+                        // sh 'sudo apt install unzip -y'
+                        // sh 'unzip awscliv2.zip'
+                        // sh 'sudo ./aws/install'
+                        // sh 'aws s3 ls'
                 }
        }
            }
