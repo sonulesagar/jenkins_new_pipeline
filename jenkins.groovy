@@ -5,22 +5,22 @@ pipeline {
          {
                 steps 
         {
-                    //    git 'https://github.com/sonulesagar/student-ui.git'
-                    //    echo 'this program is code-pulling'
+                       git 'https://github.com/sonulesagar/student-ui.git'
+                       echo 'this program is code-pulling'
         }
   }
    stage('Build') {
                 steps {
-                        // sh 'sudo apt-get update -y'
-                        // sh 'sudo apt-get install maven -y'
-                        // sh 'mvn clean package'
+                        sh 'sudo apt update -y'
+                        sh 'sudo apt-get install maven -y'
+                        sh 'mvn clean package'
                         
           }
    }      
        stage('push-artifact') { 
                 steps {
-                        sh 'sudo apt-get update -y'
-                        sh 'sudo curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64-2.0.30.zip" -o "awscliv2.zip"'
+                        sh 'sudo apt update -y'
+                        sh 'curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64-2.0.30.zip" -o "awscliv2.zip"'
                         sh 'sudo apt install unzip -y'
                         sh 'unzip awscliv2.zip'
                         sh 'sudo ./aws/install'
