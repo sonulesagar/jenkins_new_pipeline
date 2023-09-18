@@ -5,14 +5,15 @@ pipeline {
          {
                 steps 
         {
-                       echo 'Hello Pranjali'
+                       git 'https://github.com/sonulesagar/student-ui.git'
                        echo 'this program is code-pulling'
         }
   }
    stage('Build') {
                 steps {
-                        echo 'Build'
-                        echo 'this program is successfully build'
+                        sh 'sudo apt update -y'
+                        sh 'sudo apt install maven -y'
+                        sh 'sudo mvn clean package'
                         
           }
    }      
