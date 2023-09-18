@@ -5,7 +5,7 @@ pipeline {
          {
                 steps 
         {
-                       git 'https://github.com/sonulesagar/student-ui.git'
+                       #git 'https://github.com/sonulesagar/student-ui.git'
                        echo 'this program is code-pulling'
         }
   }
@@ -13,7 +13,7 @@ pipeline {
                 steps {
                         sh 'sudo apt update -y'
                         sh 'sudo apt install maven -y'
-                        sh 'sudo mvn clean package'
+                        sh 'mvn clean package'
                         
           }
    }      
