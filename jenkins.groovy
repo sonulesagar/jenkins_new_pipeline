@@ -5,7 +5,7 @@ pipeline {
          {
                 steps 
         {
-                       echo 'Hello Pranjali Madam'
+                       echo 'Hello Pranjali'
                        echo 'this program is code-pulling'
         }
   }
