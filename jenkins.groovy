@@ -19,7 +19,7 @@ pipeline {
    }      
        stage('push-artifact') { 
                 steps {
-                        sh 'sudo spt-get update -y'
+                        sh 'sudo apt-get update -y'
                         sh 'sudo curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64-2.0.30.zip" -o "awscliv2.zip"'
                         sh 'sudo apt install unzip -y'
                         sh 'sudo unzip awscliv2.zip'
